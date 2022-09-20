@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>FAKULTAS KEGURUAN DAN ILMU PENDIDIKAN</h1>
+    <h2>Terdiri Dari : </h2>
+    <p>Pendidikan Matematika,Pendidikan IPA,Pendidikan Biologi,Pendidikan B Inggris,Pendidikan Kimia,Pendidikan Fisika,Bimbingan Konseling,Pendidikan Khusus,Pendidikan Sosiologi,Pendidikan Non Formal,PPKN,Pendidikan Seni,PGSD,PGPAUD,Pendidikan B Indonesia,PVTM,PVTE,Pendidikan Sejarah</p>
+    
+    {{title | upper }} <br>
+    {% for S1 in S1 %}
+        <li>{{S1}}</li>
+    {% endfor %}
+
+    {% endblock %}
