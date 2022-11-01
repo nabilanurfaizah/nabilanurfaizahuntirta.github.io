@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>FAKULTAS PERTANIAN</h1>
+<h1>FAKULTAS PERTANIAN</h1>
     <h2>Terdiri dari :</h2>
     <p>Agrobisnis,Ilmu Perikanan,Agroteknologi,Teknologi Pangan,Ilmu Kelautan</p>
     
@@ -9,5 +9,41 @@
     {% for S1 in S1 %}
         <li>{{S1}}</li>
     {% endfor %}
+    
 
-    {% endblock %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>NIP</th>
+                        <th>Nama</th>
+                        <th>Tanggal Lahir</th>
+                        <th>Foto</th>
+                        <th>Email</th>
+                        <th>Fakultas</th>
+                        <th>Prodi</th>
+                        <th>Alamat Rumah</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for views in faperta %}
+                    <tr>
+                        <td>{{ dosen.nip }}</td>
+                        <td>{{ dosen.nama }}</td>
+                        <td>{{ dosen.tanggal_lahir }}</td>
+                        <td>{{ dosen.foto }}</td>
+                        <td>{{ dosen.email  }}</td>
+                        <td>{{ dosen.fakultas  }}</td>
+                        <td>{{ dosen.prodi }}</td>
+                        <td>{{ dosen.alamat_rumah }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endfor %}
+{% endblock %}
